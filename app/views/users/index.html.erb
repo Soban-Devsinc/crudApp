@@ -1,0 +1,18 @@
+
+<h1>Users</h1>
+
+<table border>
+<% @users.each do |usr| %>
+<tr>
+<td> <%= usr.id %> </td>
+<td> <%= link_to usr.name, user_path(usr) %> </td>
+<td> <%= usr.email %> </td>
+<td> <%= usr.cnic %> </td>
+<td> <%= usr.dob %> </td>
+<td> <%= button_to 'Edit', edit_user_path(usr) %> </td>
+<td> <%= button_to 'Remove', user_path(usr), method: :delete%> </td>
+</tr>
+<% end %>
+</table>
+
+<%= link_to 'Add a User', new_user_path%>
