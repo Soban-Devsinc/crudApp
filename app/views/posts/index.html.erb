@@ -1,0 +1,14 @@
+
+<h1>Posts</h1>
+
+<table border>
+<% @posts.each do |pst| %>
+<tr>
+<td> <%= pst.id %> </td>
+<td> <%= link_to pst.title, post_path(pst) %> </td>
+<td> <%= pst.description %> </td>
+</tr>
+<% end %>
+</table>
+
+

@@ -1,0 +1,11 @@
+<h1> Add a User </h1>
+
+<%= form_with model: @user do |u| %>
+<%= u.text_field :name, placeholder:"Enter Name" %> <br>
+<%= u.text_field :email, placeholder:"Enter Email" %> <br>
+<%= u.text_field :cnic, placeholder:"Enter Cnin" %> <br>
+<%= u.text_field :dob, placeholder:"Enter DOB" %> <br>
+<%= u.submit %> <br>
+
+<% end %>
+
